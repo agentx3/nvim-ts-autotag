@@ -502,6 +502,10 @@ M.attach = function(bufnr)
                 buffer = bufnr,
                 callback = M.rename_tag,
             })
+            vim.api.nvim_create_autocmd("TextChanged", {
+                buffer = bufnr,
+                callback = M.rename_tag,
+            })
         end
     end
 end
